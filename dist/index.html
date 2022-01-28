@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>unixgradient.org</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Unix gradient">
+    <meta name="author" content="Rick van der Wolk">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="../dist/js/unix-gradient.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="unix-gradient-header-text">
+            <!-- Unix Gradient in text, set by js -->
+        </h1>
+        <p id="unix-gradient-sub-text">
+            <!-- Number of gradients since Jan 1st. 1970 00:00 (UTC), set by js -->
+        </p>
+    </div>
+    <script>
+        var elementHeader = document.getElementById('unix-gradient-header-text');
+        var elementSubText = document.getElementById('unix-gradient-sub-text');
+        var unixGradient = new UnixGradient();
+        var previousTime = 0;
+        setInterval(function () {
+            var time = Math.round(new Date().getTime() / 1000);
+            if (time !== previousTime) {
+                unixGradient.setTime(time);
+                document.body.style.background = 'linear-gradient(to right, RGB(' + unixGradient.getColor1().join(',') + '),RGB(' + unixGradient.getColor2().join(',') + '))';
+                elementHeader.innerHTML = '<span>RGB(' + unixGradient.getColor1().join(',') + ')</span><span> + </span><span>RGB(' + unixGradient.getColor2().join(',') + ')</span>';
+                elementSubText.innerHTML = '<span>' + unixGradient.getTime().toLocaleString() + ' </span><span>gradients since</span><span> Jan 1st. 1970 00:00 (UTC) ';
+                previousTime = time;
+            }
+        }, 100);
+    </script>
+</body>
+</html>

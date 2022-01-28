@@ -1,0 +1,48 @@
+html {
+    height: 92%;
+    min-height: 92%;
+}
+
+body {
+    height: 100%;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    color: white;
+}
+
+.container {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 0;
+}
+
+.container p {
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+    #unix-gradient-header-text span,
+    #unix-gradient-sub-text span {
+        display: block;
+    }
+    #unix-gradient-sub-text span {
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    #unix-gradient-header-text span,
+    #unix-gradient-sub-text span {
+        display: inline;
+    }
+}
