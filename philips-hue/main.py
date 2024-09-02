@@ -64,7 +64,7 @@ def find_bridge():
 
 def register_hue_user(bridge_ip):
     url = f"http://{bridge_ip}/api"
-    data = {"devicetype": "my_hue_app#raspberrypi"}
+    data = {"devicetype": "unix_gradient#raspberrypi"}
     while True:
         logging.info("Press the button on the Hue Bridge to connect...")
         response = requests.post(url, json=data).json()
@@ -173,7 +173,6 @@ def update_light(gradient, light_url):
     settings = convert(float(color[0]), float(color[1]), float(color[2]))
     data_light = '{"transitiontime": 0, "xy": [' + str(settings['x']) + ', ' + str(settings['y']) + ']}'
     requests.put(light_url, data_light)
-    # logging.info(f"Updated light at {light_url} to color {color}")
 
 def main_loop(bridge_ip, username, light_ids):
     previousTimestamp = 0
