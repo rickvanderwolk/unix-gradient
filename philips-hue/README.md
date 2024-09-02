@@ -34,6 +34,14 @@
 <a id="#run-script"></a>
 ## Run script
 
+### Run command
+
 Run script `/home/<your-pi-username>/unix-gradient-philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py`.
+
+### Connect bridge (first time only)
+
+When you run this script for the first time, it will automatically search for your Philips Hue Bridge on the network. Ensure your Bridge is powered on and connected to the same network as your Pi. After starting the script, press the physical connect button on the Hue Bridge to allow the script to establish a connection and continue with the setup.
+
+### Choose specific lights
 
 By default, the script uses the first two full-color lights it finds. Use the `--lights` parameter to specify which lights to use.`/home/<your-pi-username>/unix-gradient-philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py --lights <your-light-id-1> <your-light-id-2>`. You can find the light ids by using the API or by running the script without this parameter to see a list of available lights.
