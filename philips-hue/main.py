@@ -8,7 +8,7 @@ import logging
 CONFIG_FILE = 'config.json'
 
 logging.basicConfig(
-    filename='hue_light_control.log',
+    filename='main.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
