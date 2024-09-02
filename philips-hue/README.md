@@ -15,7 +15,7 @@
 
 1. `crontab -e`
 2. Choose nano by pressing `1` + `enter`
-3. Add to following line `@reboot /home/<your-pi-username>/unix-gradient/philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py >> /home/<your-pi-username>/unix-gradient/philips-hue/cronjob.log 2>&1`
+3. Add to following line `@reboot /home/pimonitorstudio/unix-gradient/philips-hue/main.py >> /home/<your-pi-username>/unix-gradient/philips-hue/cronjob.log 2>&1`
 4. Press `ctrl` + `x` and then `y` to save
 5. Reboot `sudo reboot`
 
