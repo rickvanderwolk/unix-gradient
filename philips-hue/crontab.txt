@@ -1,0 +1,1 @@
+@reboot /home/<your-pi-username>/unix-gradient/philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py >> /home/<your-pi-username>/unix-gradient/philips-hue/cronjob.log 2>&1
