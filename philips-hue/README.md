@@ -1,5 +1,17 @@
 # Unix gradient Philips Hue
 
+- [Hardware](#hardware)
+- [Getting started](#getting-started)
+- [Run script](#run-script)
+
+<a id="hardware"></a>
+## Hardware
+
+- Raspberry Pi; I currently use a Pi 5 (4GB) but any Pi will probably do just fine
+- Philips Hue bridge
+- Two full colors Philips Hue lights (for example: two Philips Hue white & color bulbs or two Philips Hue play bars)
+
+<a id="getting-started"></a>
 ## Getting started
 
 ## Install
@@ -24,4 +36,4 @@
 
 Run script `/home/<your-pi-username>/unix-gradient-philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py`.
 
-By default, the script uses the first two full-color lights it finds. Use the --lights parameter to specify which lights to use.`/home/<your-pi-username>/unix-gradient-philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py --lights <your-light-id-1> <your-light-id-2>`. You can find the light ids by using the API or by running the script without this parameter to see a list of available lights.
+By default, the script uses the first two full-color lights it finds. Use the `--lights` parameter to specify which lights to use.`/home/<your-pi-username>/unix-gradient-philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py --lights <your-light-id-1> <your-light-id-2>`. You can find the light ids by using the API or by running the script without this parameter to see a list of available lights.
