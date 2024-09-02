@@ -23,14 +23,6 @@
 5. Run install script `bash unix-gradient/philips-hue/install.sh` (might take a while)
 6. [Run script](#run-script)
 
-### Start script on boot (optional)
-
-1. `crontab -e`
-2. Choose nano by pressing `1` + `enter`
-3. Add to following line `@reboot /home/<your-pi-username>/unix-gradient-philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py >> /home/<your-pi-username>/unix-gradient/philips-hue/cronjob.log 2>&1`
-4. Press `ctrl` + `x` and then `y` to save
-5. Reboot `sudo reboot`
-
 <a id="#run-script"></a>
 ## Run script
 
@@ -45,3 +37,11 @@ When you run this script for the first time, it will automatically search for yo
 ### Choose specific lights
 
 By default, the script uses the first two full-color lights it finds. Use the `--lights` parameter to specify which lights to use.`/home/<your-pi-username>/unix-gradient-philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py --lights <your-light-id-1> <your-light-id-2>`. You can find the light ids by using the API or by running the script without this parameter to see a list of available lights.
+
+### Run on boot (optional)
+
+1. `crontab -e`
+2. Choose nano by pressing `1` + `enter`
+3. Add to following line `@reboot /home/<your-pi-username>/unix-gradient-philips-hue/bin/python /home/<your-pi-username>/unix-gradient/philips-hue/main.py >> /home/<your-pi-username>/unix-gradient/philips-hue/cronjob.log 2>&1`
+4. Press `ctrl` + `x` and then `y` to save
+5. Reboot `sudo reboot`
