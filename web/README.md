@@ -2,4 +2,4 @@
 
 ![preview](preview-sm.png)
 
-[Live](https://unixgradient.org)
+Live: [unixgradient.org](https://unixgradient.org)
