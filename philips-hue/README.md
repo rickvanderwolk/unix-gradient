@@ -22,5 +22,5 @@
 <a id="#run-script"></a>
 ## Run script
 
-Run script `/home/pimonitorstudio/unix-gradient-philips-hue/bin/python /home/pimonitorstudio/unix-gradient/philips-hue/main.py`. You probably need to use `sudo` to run the script as we use the GPIO pins for communication with the LED strip.
+Run script `/home/pimonitorstudio/unix-gradient-philips-hue/bin/python /home/pimonitorstudio/unix-gradient/philips-hue/main.py`.
 
