@@ -29,7 +29,7 @@ def wait_for_network(timeout=30):
     start_time = time.time()
     while time.time() - start_time < timeout:
         try:
-            requests.get('https://www.google.com', timeout=5)
+            requests.get('https://1.1.1.1', timeout=5)
             logging.info("Network connectivity established.")
             return True
         except requests.ConnectionError:
