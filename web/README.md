@@ -1,4 +1,4 @@
-# Unix gradient
+# Unix gradient web (unixgradient.org)
 
 ![preview](preview-sm.png)
 
