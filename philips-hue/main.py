@@ -4,14 +4,25 @@ import requests
 import math
 import argparse
 import logging
+import os
+import sys
 
 CONFIG_FILE = 'config.json'
 
-logging.basicConfig(
-    filename='main.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+def is_running_in_terminal():
+    return sys.stdout.isatty()
+
+if is_running_in_terminal():
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
+else:
+    logging.basicConfig(
+        filename='main.log',
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
 
 def wait_for_network(timeout=30):
     logging.info("Waiting for network connectivity...")
