@@ -7,7 +7,7 @@
 <a id="hardware"></a>
 ## Hardware
 
-- Raspberry Pi; I currently use a Pi 5 (4GB) but any Pi will probably do just fine
+- Raspberry Pi; I currently use a Pi Zero WH but any Pi will probably do just fine
 - Philips Hue bridge
 - Two full colors Philips Hue lights (for example: two Philips Hue white & color bulbs or two Philips Hue play bars)
 

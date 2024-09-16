@@ -204,7 +204,7 @@ def main_loop(bridge_ip, username, light_ids):
         time.sleep(0.1)
 
 def main():
-    if not wait_for_network():
+    if not wait_for_network(90):
         logging.error("Network initialization failed. Exiting.")
         return
 
