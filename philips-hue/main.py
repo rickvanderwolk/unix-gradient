@@ -172,7 +172,10 @@ def update_light(gradient, light_url):
     color = gradient.split(',')
     settings = convert(float(color[0]), float(color[1]), float(color[2]))
     data_light = '{"transitiontime": 0, "xy": [' + str(settings['x']) + ', ' + str(settings['y']) + ']}'
-    requests.put(light_url, data_light)
+    try:
+        requests.put(light_url, data=data_light, timeout=5)
+    except requests.RequestException as e:
+        logging.error(f"Failed to update light at {light_url}: {e}")
 
 def main_loop(bridge_ip, username, light_ids):
     previousTimestamp = 0
